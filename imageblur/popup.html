@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ImageBlur</title>
+    <script type="text/javascript" src="popup.js"></script>
+    <style>
+      body {
+        min-width: 200px;
+      }
+      button {
+        padding: 5%;
+        margin: 5px;
+        width: 94%;
+      }
+      label {
+        margin: 10px 5px;
+      }
+      div[contenteditable] {
+        padding: 5px;
+        margin: 5px;
+        width: calc(94% - 12px);
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ImageBlur</h1>
+
+    <label>Blur by default: <input id="defaultBlur" type="checkbox" /></label>
+
+    <br />
+    <br />
+
+    <button id="blur">Blur!</button>
+    <button id="unblur">Unblur</button>
+    <button id="removeBGImages">Remove BG Images</button>
+
+    <br />
+    <br />
+
+    <label>Whitelist (domain by line break)</label>
+    <div contenteditable id="whitelist"></div>
+
+    <br />
+    <br />
+
+    <label>Blur Amount (<span id="blurAmountText">6</span>)</label>
+    <input id="blurAmount" type="range" min="1" max="10" value="6" />
+
+    <br />
+    <br />
+
+    <p><small>Hold [Shift]+[Alt/Option] and click an image to unblur</small></p>
+  </body>
+</html>
